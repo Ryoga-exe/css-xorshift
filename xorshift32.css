@@ -144,7 +144,7 @@ body {
 }
 .display-frame-count::after {
   counter-reset: frame var(--frame-count);
-  content: "--frame-count: " counter(frame);
+  content: "frame-count: " counter(frame);
 }
 .display-x-binary::after {
   counter-reset:
@@ -396,33 +396,52 @@ body:has(.phase-3:hover) {
   animation-play-state: paused, paused;
 }
 
+/* styling */
+
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   box-sizing: border-box;
+}
+.container {
+  margin-inline: auto;
+  padding-inline: 4vw;
+  max-width: 1120px;
 }
 body {
   min-height: 100vh;
+  font-family: system-ui,
+               -apple-system,
+               "Segoe UI",
+               Roboto,
+               "Helvetica Neue",
+               "Noto Sans",
+               "Liberation Sans",
+               Arial,
+               sans-serif;
 }
-div {
-  padding: 40px;
-  background: darkgray;
+header {
+  background-color: #212529;
+  color: #eee;
+  padding-block: 0.5em;
 }
-div:hover {
-  opacity: 0.75;
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-block: 0.3125rem;
 }
-.cpu,
-body::after {
-  position: relative;
-  top: 0px;
-  left: 50px;
-  padding: 20px;
-  width: 140px;
-  display: block;
+header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
+header a {
+  color: #eee;
+}
 .cpu {
+  position: relative;
+  padding: 20px;
+  display: block;
   top: 61px;
   left: 240px;
   width: 250px;

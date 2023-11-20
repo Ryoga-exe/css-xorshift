@@ -419,6 +419,7 @@ body {
                "Liberation Sans",
                Arial,
                sans-serif;
+  line-height: 1.5;
 }
 header {
   background-color: #212529;
@@ -430,6 +431,10 @@ h1 {
   font-weight: bold;
   padding-block: 0.3125rem;
 }
+h2 {
+  font-size: 1.5rem;
+  padding-block: 0.45rem;
+}
 header > .container {
   display: flex;
   align-items: center;
@@ -438,19 +443,23 @@ header > .container {
 header a {
   color: #eee;
 }
+main {
+  padding-block: 1.75rem;
+}
+div[class^="display"] {
+  font-size: 1.2rem;
+  margin-block: 0.2rem;
+}
 .cpu {
-  position: relative;
   padding: 20px;
-  display: block;
-  top: 61px;
-  left: 240px;
-  width: 250px;
+  display: flex;
+  max-width: 300px;
   border: 3px solid black;
-  outline-offset: -7px;
+  justify-content: center;
+  margin-block: 2rem 5rem;
 }
 .cpu::after {
   content: "Hover me to calculate";
-  white-space: nowrap;
 }
 .cpu:hover {
   border: 3px solid red;
@@ -458,3 +467,15 @@ header a {
 .cpu:hover::after {
   content: "Calculating..."
 }
+.description {
+  margin-block-start: 1rem;
+}
+.note {
+  color: #664d03;
+  background-color: #fff3cd;
+  border: 1px solid #ffe69c;
+  padding: 1rem;
+  margin-block: 1.5rem;
+  border-radius: 0.375rem;
+}
+

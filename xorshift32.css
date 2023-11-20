@@ -1,0 +1,441 @@
+body {
+  animation: hoist 1ms infinite, capture 1ms infinite;
+  animation-play-state: paused, paused;
+
+  --frame-input: var(--frame-hoist, 0);
+  --frame-count: calc(var(--frame-input) + 1);
+
+  --x31-input: var(--x31-hoist, 0);
+  --x30-input: var(--x30-hoist, 0);
+  --x29-input: var(--x29-hoist, 0);
+  --x28-input: var(--x28-hoist, 0);
+  --x27-input: var(--x27-hoist, 0);
+  --x26-input: var(--x26-hoist, 0);
+  --x25-input: var(--x25-hoist, 0);
+  --x24-input: var(--x24-hoist, 0);
+  --x23-input: var(--x23-hoist, 0);
+  --x22-input: var(--x22-hoist, 0);
+  --x21-input: var(--x21-hoist, 0);
+  --x20-input: var(--x20-hoist, 0);
+  --x19-input: var(--x19-hoist, 0);
+  --x18-input: var(--x18-hoist, 0);
+  --x17-input: var(--x17-hoist, 0);
+  --x16-input: var(--x16-hoist, 0);
+  --x15-input: var(--x15-hoist, 0);
+  --x14-input: var(--x14-hoist, 0);
+  --x13-input: var(--x13-hoist, 0);
+  --x12-input: var(--x12-hoist, 0);
+  --x11-input: var(--x11-hoist, 0);
+  --x10-input: var(--x10-hoist, 0);
+  --x09-input: var(--x09-hoist, 0);
+  --x08-input: var(--x08-hoist, 0);
+  --x07-input: var(--x07-hoist, 0);
+  --x06-input: var(--x06-hoist, 0);
+  --x05-input: var(--x05-hoist, 0);
+  --x04-input: var(--x04-hoist, 0);
+  --x03-input: var(--x03-hoist, 0);
+  --x02-input: var(--x02-hoist, 0);
+  --x01-input: var(--x01-hoist, 0);
+  --x00-input: var(--x00-hoist, 0);
+
+  /*
+    y = (x_in xor (x_in << 13))
+    z = (y xor (y >> 17))
+    x = (z xor (z << 5))
+  */
+  --y31: calc((var(--x31-input) - var(--x18-input)) * (var(--x31-input) - var(--x18-input)));
+  --y30: calc((var(--x30-input) - var(--x17-input)) * (var(--x30-input) - var(--x17-input)));
+  --y29: calc((var(--x29-input) - var(--x16-input)) * (var(--x29-input) - var(--x16-input)));
+  --y28: calc((var(--x28-input) - var(--x15-input)) * (var(--x28-input) - var(--x15-input)));
+  --y27: calc((var(--x27-input) - var(--x14-input)) * (var(--x27-input) - var(--x14-input)));
+  --y26: calc((var(--x26-input) - var(--x13-input)) * (var(--x26-input) - var(--x13-input)));
+  --y25: calc((var(--x25-input) - var(--x12-input)) * (var(--x25-input) - var(--x12-input)));
+  --y24: calc((var(--x24-input) - var(--x11-input)) * (var(--x24-input) - var(--x11-input)));
+  --y23: calc((var(--x23-input) - var(--x10-input)) * (var(--x23-input) - var(--x10-input)));
+  --y22: calc((var(--x22-input) - var(--x09-input)) * (var(--x22-input) - var(--x09-input)));
+  --y21: calc((var(--x21-input) - var(--x08-input)) * (var(--x21-input) - var(--x08-input)));
+  --y20: calc((var(--x20-input) - var(--x07-input)) * (var(--x20-input) - var(--x07-input)));
+  --y19: calc((var(--x19-input) - var(--x06-input)) * (var(--x19-input) - var(--x06-input)));
+  --y18: calc((var(--x18-input) - var(--x05-input)) * (var(--x18-input) - var(--x05-input)));
+  --y17: calc((var(--x17-input) - var(--x04-input)) * (var(--x17-input) - var(--x04-input)));
+  --y16: calc((var(--x16-input) - var(--x03-input)) * (var(--x16-input) - var(--x03-input)));
+  --y15: calc((var(--x15-input) - var(--x02-input)) * (var(--x15-input) - var(--x02-input)));
+  --y14: calc((var(--x14-input) - var(--x01-input)) * (var(--x14-input) - var(--x01-input)));
+  --y13: calc((var(--x13-input) - var(--x00-input)) * (var(--x13-input) - var(--x00-input)));
+  --y12: calc((var(--x12-input) - 0) * (var(--x12-input) - 0));
+  --y11: calc((var(--x11-input) - 0) * (var(--x11-input) - 0));
+  --y10: calc((var(--x10-input) - 0) * (var(--x10-input) - 0));
+  --y09: calc((var(--x09-input) - 0) * (var(--x09-input) - 0));
+  --y08: calc((var(--x08-input) - 0) * (var(--x08-input) - 0));
+  --y07: calc((var(--x07-input) - 0) * (var(--x07-input) - 0));
+  --y06: calc((var(--x06-input) - 0) * (var(--x06-input) - 0));
+  --y05: calc((var(--x05-input) - 0) * (var(--x05-input) - 0));
+  --y04: calc((var(--x04-input) - 0) * (var(--x04-input) - 0));
+  --y03: calc((var(--x03-input) - 0) * (var(--x03-input) - 0));
+  --y02: calc((var(--x02-input) - 0) * (var(--x02-input) - 0));
+  --y01: calc((var(--x01-input) - 0) * (var(--x01-input) - 0));
+  --y00: calc((var(--x00-input) - 0) * (var(--x00-input) - 0));
+
+  --z31: calc((var(--y31) - 0) * (var(--y31) - 0));
+  --z30: calc((var(--y30) - 0) * (var(--y30) - 0));
+  --z29: calc((var(--y29) - 0) * (var(--y29) - 0));
+  --z28: calc((var(--y28) - 0) * (var(--y28) - 0));
+  --z27: calc((var(--y27) - 0) * (var(--y27) - 0));
+  --z26: calc((var(--y26) - 0) * (var(--y26) - 0));
+  --z25: calc((var(--y25) - 0) * (var(--y25) - 0));
+  --z24: calc((var(--y24) - 0) * (var(--y24) - 0));
+  --z23: calc((var(--y23) - 0) * (var(--y23) - 0));
+  --z22: calc((var(--y22) - 0) * (var(--y22) - 0));
+  --z21: calc((var(--y21) - 0) * (var(--y21) - 0));
+  --z20: calc((var(--y20) - 0) * (var(--y20) - 0));
+  --z19: calc((var(--y19) - 0) * (var(--y19) - 0));
+  --z18: calc((var(--y18) - 0) * (var(--y18) - 0));
+  --z17: calc((var(--y17) - 0) * (var(--y17) - 0));
+  --z16: calc((var(--y16) - 0) * (var(--y16) - 0));
+  --z15: calc((var(--y15) - 0) * (var(--y15) - 0));
+  --z14: calc((var(--y14) - var(--y31)) * (var(--y14) - var(--y31)));
+  --z13: calc((var(--y13) - var(--y30)) * (var(--y13) - var(--y30)));
+  --z12: calc((var(--y12) - var(--y29)) * (var(--y12) - var(--y29)));
+  --z11: calc((var(--y11) - var(--y28)) * (var(--y11) - var(--y28)));
+  --z10: calc((var(--y10) - var(--y27)) * (var(--y10) - var(--y27)));
+  --z09: calc((var(--y09) - var(--y26)) * (var(--y09) - var(--y26)));
+  --z08: calc((var(--y08) - var(--y25)) * (var(--y08) - var(--y25)));
+  --z07: calc((var(--y07) - var(--y24)) * (var(--y07) - var(--y24)));
+  --z06: calc((var(--y06) - var(--y23)) * (var(--y06) - var(--y23)));
+  --z05: calc((var(--y05) - var(--y22)) * (var(--y05) - var(--y22)));
+  --z04: calc((var(--y04) - var(--y21)) * (var(--y04) - var(--y21)));
+  --z03: calc((var(--y03) - var(--y20)) * (var(--y03) - var(--y20)));
+  --z02: calc((var(--y02) - var(--y19)) * (var(--y02) - var(--y19)));
+  --z01: calc((var(--y01) - var(--y18)) * (var(--y01) - var(--y18)));
+  --z00: calc((var(--y00) - var(--y17)) * (var(--y00) - var(--y17)));
+
+  --x31: calc((var(--z31) - var(--z26)) * (var(--z31) - var(--z26)));
+  --x30: calc((var(--z30) - var(--z25)) * (var(--z30) - var(--z25)));
+  --x29: calc((var(--z29) - var(--z24)) * (var(--z29) - var(--z24)));
+  --x28: calc((var(--z28) - var(--z23)) * (var(--z28) - var(--z23)));
+  --x27: calc((var(--z27) - var(--z22)) * (var(--z27) - var(--z22)));
+  --x26: calc((var(--z26) - var(--z21)) * (var(--z26) - var(--z21)));
+  --x25: calc((var(--z25) - var(--z20)) * (var(--z25) - var(--z20)));
+  --x24: calc((var(--z24) - var(--z19)) * (var(--z24) - var(--z19)));
+  --x23: calc((var(--z23) - var(--z18)) * (var(--z23) - var(--z18)));
+  --x22: calc((var(--z22) - var(--z17)) * (var(--z22) - var(--z17)));
+  --x21: calc((var(--z21) - var(--z16)) * (var(--z21) - var(--z16)));
+  --x20: calc((var(--z20) - var(--z15)) * (var(--z20) - var(--z15)));
+  --x19: calc((var(--z19) - var(--z14)) * (var(--z19) - var(--z14)));
+  --x18: calc((var(--z18) - var(--z13)) * (var(--z18) - var(--z13)));
+  --x17: calc((var(--z17) - var(--z12)) * (var(--z17) - var(--z12)));
+  --x16: calc((var(--z16) - var(--z11)) * (var(--z16) - var(--z11)));
+  --x15: calc((var(--z15) - var(--z10)) * (var(--z15) - var(--z10)));
+  --x14: calc((var(--z14) - var(--z09)) * (var(--z14) - var(--z09)));
+  --x13: calc((var(--z13) - var(--z08)) * (var(--z13) - var(--z08)));
+  --x12: calc((var(--z12) - var(--z07)) * (var(--z12) - var(--z07)));
+  --x11: calc((var(--z11) - var(--z06)) * (var(--z11) - var(--z06)));
+  --x10: calc((var(--z10) - var(--z05)) * (var(--z10) - var(--z05)));
+  --x09: calc((var(--z09) - var(--z04)) * (var(--z09) - var(--z04)));
+  --x08: calc((var(--z08) - var(--z03)) * (var(--z08) - var(--z03)));
+  --x07: calc((var(--z07) - var(--z02)) * (var(--z07) - var(--z02)));
+  --x06: calc((var(--z06) - var(--z01)) * (var(--z06) - var(--z01)));
+  --x05: calc((var(--z05) - var(--z00)) * (var(--z05) - var(--z00)));
+  --x04: calc((var(--z04) - 0) * (var(--z04) - 0));
+  --x03: calc((var(--z03) - 0) * (var(--z03) - 0));
+  --x02: calc((var(--z02) - 0) * (var(--z02) - 0));
+  --x01: calc((var(--z01) - 0) * (var(--z01) - 0));
+  --x00: calc((var(--z00) - 0) * (var(--z00) - 0));
+}
+.display-frame-count::after {
+  counter-reset: frame var(--frame-count);
+  content: "--frame-count: " counter(frame);
+}
+.display-x-binary::after {
+  counter-reset:
+    x31 var(--x31)
+    x30 var(--x30)
+    x29 var(--x29)
+    x28 var(--x28)
+    x27 var(--x27)
+    x26 var(--x26)
+    x25 var(--x25)
+    x24 var(--x24)
+    x23 var(--x23)
+    x22 var(--x22)
+    x21 var(--x21)
+    x20 var(--x20)
+    x19 var(--x19)
+    x18 var(--x18)
+    x17 var(--x17)
+    x16 var(--x16)
+    x15 var(--x15)
+    x14 var(--x14)
+    x13 var(--x13)
+    x12 var(--x12)
+    x11 var(--x11)
+    x10 var(--x10)
+    x09 var(--x09)
+    x08 var(--x08)
+    x07 var(--x07)
+    x06 var(--x06)
+    x05 var(--x05)
+    x04 var(--x04)
+    x03 var(--x03)
+    x02 var(--x02)
+    x01 var(--x01)
+    x00 var(--x00);
+  content: "x = 0b"
+    counter(x31)
+    counter(x30)
+    counter(x29)
+    counter(x28)
+    counter(x27)
+    counter(x26)
+    counter(x25)
+    counter(x24)
+    counter(x23)
+    counter(x22)
+    counter(x21)
+    counter(x20)
+    counter(x19)
+    counter(x18)
+    counter(x17)
+    counter(x16)
+    counter(x15)
+    counter(x14)
+    counter(x13)
+    counter(x12)
+    counter(x11)
+    counter(x10)
+    counter(x09)
+    counter(x08)
+    counter(x07)
+    counter(x06)
+    counter(x05)
+    counter(x04)
+    counter(x03)
+    counter(x02)
+    counter(x01)
+    counter(x00);
+}
+.display-x::after {
+  --x: calc(
+    var(--x30) * 1073741824 +
+    var(--x29) * 536870912 +
+    var(--x28) * 268435456 +
+    var(--x27) * 134217728 +
+    var(--x26) * 67108864 +
+    var(--x25) * 33554432 +
+    var(--x24) * 16777216 +
+    var(--x23) * 8388608 +
+    var(--x22) * 4194304 +
+    var(--x21) * 2097152 +
+    var(--x20) * 1048576 +
+    var(--x19) * 524288 +
+    var(--x18) * 262144 +
+    var(--x17) * 131072 +
+    var(--x16) * 65536 +
+    var(--x15) * 32768 +
+    var(--x14) * 16384 +
+    var(--x13) * 8192 +
+    var(--x12) * 4096 +
+    var(--x11) * 2048 +
+    var(--x10) * 1024 +
+    var(--x09) * 512 +
+    var(--x08) * 256 +
+    var(--x07) * 128 +
+    var(--x06) * 64 +
+    var(--x05) * 32 +
+    var(--x04) * 16 +
+    var(--x03) * 8 +
+    var(--x02) * 4 +
+    var(--x01) * 2 +
+    var(--x00) * 1
+  );
+  counter-reset: x var(--x);
+  content: "x = " counter(x);
+}
+
+@keyframes hoist {
+  0%, 100% {
+    --frame-hoist: var(--frame-captured, 0);
+    --x31-hoist: var(--x31-captured, 0);
+    --x30-hoist: var(--x30-captured, 0);
+    --x29-hoist: var(--x29-captured, 0);
+    --x28-hoist: var(--x28-captured, 0);
+    --x27-hoist: var(--x27-captured, 0);
+    --x26-hoist: var(--x26-captured, 0);
+    --x25-hoist: var(--x25-captured, 0);
+    --x24-hoist: var(--x24-captured, 0);
+    --x23-hoist: var(--x23-captured, 0);
+    --x22-hoist: var(--x22-captured, 0);
+    --x21-hoist: var(--x21-captured, 0);
+    --x20-hoist: var(--x20-captured, 0);
+    --x19-hoist: var(--x19-captured, 0);
+    --x18-hoist: var(--x18-captured, 0);
+    --x17-hoist: var(--x17-captured, 0);
+    --x16-hoist: var(--x16-captured, 0);
+    --x15-hoist: var(--x15-captured, 0);
+    --x14-hoist: var(--x14-captured, 0);
+    --x13-hoist: var(--x13-captured, 0);
+    --x12-hoist: var(--x12-captured, 0);
+    --x11-hoist: var(--x11-captured, 0);
+    --x10-hoist: var(--x10-captured, 0);
+    --x09-hoist: var(--x09-captured, 0);
+    --x08-hoist: var(--x08-captured, 0);
+    --x07-hoist: var(--x07-captured, 0);
+    --x06-hoist: var(--x06-captured, 0);
+    --x05-hoist: var(--x05-captured, 0);
+    --x04-hoist: var(--x04-captured, 0);
+    --x03-hoist: var(--x03-captured, 0);
+    --x02-hoist: var(--x02-captured, 0);
+    --x01-hoist: var(--x01-captured, 0);
+    --x00-hoist: var(--x00-captured, 0);
+  }
+}
+@keyframes capture {
+  0%, 100% {
+    --frame-captured: var(--frame-count);
+    --x31-captured: var(--x31);
+    --x30-captured: var(--x30);
+    --x29-captured: var(--x29);
+    --x28-captured: var(--x28);
+    --x27-captured: var(--x27);
+    --x26-captured: var(--x26);
+    --x25-captured: var(--x25);
+    --x24-captured: var(--x24);
+    --x23-captured: var(--x23);
+    --x22-captured: var(--x22);
+    --x21-captured: var(--x21);
+    --x20-captured: var(--x20);
+    --x19-captured: var(--x19);
+    --x18-captured: var(--x18);
+    --x17-captured: var(--x17);
+    --x16-captured: var(--x16);
+    --x15-captured: var(--x15);
+    --x14-captured: var(--x14);
+    --x13-captured: var(--x13);
+    --x12-captured: var(--x12);
+    --x11-captured: var(--x11);
+    --x10-captured: var(--x10);
+    --x09-captured: var(--x09);
+    --x08-captured: var(--x08);
+    --x07-captured: var(--x07);
+    --x06-captured: var(--x06);
+    --x05-captured: var(--x05);
+    --x04-captured: var(--x04);
+    --x03-captured: var(--x03);
+    --x02-captured: var(--x02);
+    --x01-captured: var(--x01);
+    --x00-captured: var(--x00);
+  }
+}
+
+@property --frame-count { syntax: "<integer>"; initial-value: 0; inherits: true; }
+/* initial value of x is 2463534242 (0b10010010110101101000110010100010)*/
+@property --x31 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x30 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x29 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x28 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x27 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x26 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x25 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x24 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x23 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x22 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x21 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x20 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x19 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x18 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x17 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x16 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x15 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x14 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x13 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x12 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x11 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x10 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x09 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x08 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x07 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x06 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x05 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x04 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x03 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x02 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+@property --x01 { syntax: "<integer>"; initial-value: 1; inherits: true; }
+@property --x00 { syntax: "<integer>"; initial-value: 0; inherits: true; }
+
+.cpu {
+  position: relative; list-style: none;
+}
+.cpu > * {
+  position: absolute;
+  inset: 0px;
+  width: 0px;
+}
+.cpu > .phase-0 {
+  width: 100%;
+}
+.cpu > .phase-0:hover + .phase-1 {
+  width: 100%;
+}
+.cpu > .phase-1:hover + .phase-2 {
+  width: 100%;
+}
+.cpu > .phase-2:hover + .phase-3 {
+  width: 100%;
+}
+
+body:has(.phase-0:hover) {
+  animation-play-state: paused, running;
+}
+body:has(.phase-1:hover) {
+  animation-play-state: paused, paused;
+}
+body:has(.phase-2:hover) {
+  animation-play-state: running, paused;
+}
+body:has(.phase-3:hover) {
+  animation-play-state: paused, paused;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+}
+div {
+  padding: 40px;
+  background: darkgray;
+}
+div:hover {
+  opacity: 0.75;
+}
+.cpu,
+body::after {
+  position: relative;
+  top: 0px;
+  left: 50px;
+  padding: 20px;
+  width: 140px;
+  display: block;
+}
+
+.cpu {
+  top: 61px;
+  left: 240px;
+  width: 250px;
+  border: 3px solid black;
+  outline-offset: -7px;
+}
+.cpu::after {
+  content: "Hover me to calculate";
+  white-space: nowrap;
+}
+.cpu:hover {
+  border: 3px solid red;
+}
+.cpu:hover::after {
+  content: "Calculating..."
+}

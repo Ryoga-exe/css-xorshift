@@ -5,37 +5,37 @@ body {
   --frame-input: var(--frame-hoist, 0);
   --frame-count: calc(var(--frame-input) + 1);
 
-  --x31-input: var(--x31-hoist, 0);
+  --x31-input: var(--x31-hoist, 1);
   --x30-input: var(--x30-hoist, 0);
   --x29-input: var(--x29-hoist, 0);
-  --x28-input: var(--x28-hoist, 0);
+  --x28-input: var(--x28-hoist, 1);
   --x27-input: var(--x27-hoist, 0);
   --x26-input: var(--x26-hoist, 0);
-  --x25-input: var(--x25-hoist, 0);
+  --x25-input: var(--x25-hoist, 1);
   --x24-input: var(--x24-hoist, 0);
-  --x23-input: var(--x23-hoist, 0);
-  --x22-input: var(--x22-hoist, 0);
+  --x23-input: var(--x23-hoist, 1);
+  --x22-input: var(--x22-hoist, 1);
   --x21-input: var(--x21-hoist, 0);
-  --x20-input: var(--x20-hoist, 0);
+  --x20-input: var(--x20-hoist, 1);
   --x19-input: var(--x19-hoist, 0);
-  --x18-input: var(--x18-hoist, 0);
-  --x17-input: var(--x17-hoist, 0);
+  --x18-input: var(--x18-hoist, 1);
+  --x17-input: var(--x17-hoist, 1);
   --x16-input: var(--x16-hoist, 0);
-  --x15-input: var(--x15-hoist, 0);
+  --x15-input: var(--x15-hoist, 1);
   --x14-input: var(--x14-hoist, 0);
   --x13-input: var(--x13-hoist, 0);
   --x12-input: var(--x12-hoist, 0);
-  --x11-input: var(--x11-hoist, 0);
-  --x10-input: var(--x10-hoist, 0);
+  --x11-input: var(--x11-hoist, 1);
+  --x10-input: var(--x10-hoist, 1);
   --x09-input: var(--x09-hoist, 0);
   --x08-input: var(--x08-hoist, 0);
-  --x07-input: var(--x07-hoist, 0);
+  --x07-input: var(--x07-hoist, 1);
   --x06-input: var(--x06-hoist, 0);
-  --x05-input: var(--x05-hoist, 0);
+  --x05-input: var(--x05-hoist, 1);
   --x04-input: var(--x04-hoist, 0);
   --x03-input: var(--x03-hoist, 0);
   --x02-input: var(--x02-hoist, 0);
-  --x01-input: var(--x01-hoist, 0);
+  --x01-input: var(--x01-hoist, 1);
   --x00-input: var(--x00-hoist, 0);
 
   /*
@@ -255,37 +255,37 @@ body {
 @keyframes hoist {
   0%, 100% {
     --frame-hoist: var(--frame-captured, 0);
-    --x31-hoist: var(--x31-captured, 0);
+    --x31-hoist: var(--x31-captured, 1);
     --x30-hoist: var(--x30-captured, 0);
     --x29-hoist: var(--x29-captured, 0);
-    --x28-hoist: var(--x28-captured, 0);
+    --x28-hoist: var(--x28-captured, 1);
     --x27-hoist: var(--x27-captured, 0);
     --x26-hoist: var(--x26-captured, 0);
-    --x25-hoist: var(--x25-captured, 0);
+    --x25-hoist: var(--x25-captured, 1);
     --x24-hoist: var(--x24-captured, 0);
-    --x23-hoist: var(--x23-captured, 0);
-    --x22-hoist: var(--x22-captured, 0);
+    --x23-hoist: var(--x23-captured, 1);
+    --x22-hoist: var(--x22-captured, 1);
     --x21-hoist: var(--x21-captured, 0);
-    --x20-hoist: var(--x20-captured, 0);
+    --x20-hoist: var(--x20-captured, 1);
     --x19-hoist: var(--x19-captured, 0);
-    --x18-hoist: var(--x18-captured, 0);
-    --x17-hoist: var(--x17-captured, 0);
+    --x18-hoist: var(--x18-captured, 1);
+    --x17-hoist: var(--x17-captured, 1);
     --x16-hoist: var(--x16-captured, 0);
-    --x15-hoist: var(--x15-captured, 0);
+    --x15-hoist: var(--x15-captured, 1);
     --x14-hoist: var(--x14-captured, 0);
     --x13-hoist: var(--x13-captured, 0);
     --x12-hoist: var(--x12-captured, 0);
-    --x11-hoist: var(--x11-captured, 0);
-    --x10-hoist: var(--x10-captured, 0);
+    --x11-hoist: var(--x11-captured, 1);
+    --x10-hoist: var(--x10-captured, 1);
     --x09-hoist: var(--x09-captured, 0);
     --x08-hoist: var(--x08-captured, 0);
-    --x07-hoist: var(--x07-captured, 0);
+    --x07-hoist: var(--x07-captured, 1);
     --x06-hoist: var(--x06-captured, 0);
-    --x05-hoist: var(--x05-captured, 0);
+    --x05-hoist: var(--x05-captured, 1);
     --x04-hoist: var(--x04-captured, 0);
     --x03-hoist: var(--x03-captured, 0);
     --x02-hoist: var(--x02-captured, 0);
-    --x01-hoist: var(--x01-captured, 0);
+    --x01-hoist: var(--x01-captured, 1);
     --x00-hoist: var(--x00-captured, 0);
   }
 }
@@ -478,4 +478,3 @@ div[class^="display"] {
   margin-block: 1.5rem;
   border-radius: 0.375rem;
 }
-
